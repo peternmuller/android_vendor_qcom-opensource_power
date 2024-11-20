@@ -158,7 +158,6 @@ ndk::ScopedAStatus Power::isBoostSupported(Boost type, bool* _aidl_return) {
 
 ndk::ScopedAStatus Power::createHintSession(int32_t tgid, int32_t uid, const std::vector<int32_t>& threadIds, int64_t durationNanos,
                                             std::shared_ptr<IPowerHintSession>* _aidl_return) {
-    LOG(INFO) << "Power createHintSession";
     if (threadIds.size() == 0) {
         LOG(ERROR) << "Error: threadIds.size() shouldn't be " << threadIds.size();
         *_aidl_return = nullptr;
