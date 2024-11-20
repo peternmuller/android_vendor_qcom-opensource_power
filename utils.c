@@ -271,8 +271,6 @@ int perf_hint_enable(int hint_id , int duration)
     if (qcopt_handle) {
         if (perf_hint) {
             lock_handle = perf_hint(hint_id, pkg, duration, -1);
-            if (lock_handle == -1)
-                ALOGE("Failed to acquire lock for hint_id: %X.", hint_id);
         }
     }
     return lock_handle;
